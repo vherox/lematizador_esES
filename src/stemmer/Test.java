@@ -11,6 +11,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.ParseException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,6 +37,12 @@ public class Test {
             System.out.println(stemmer.stem("cosas"));
             System.out.println(stemmer.stem("comas"));
             System.out.println(stemmer.stem("préstamos"));
+            
+            String utterance = "Las casas estaban hundidas";
+            List<String> words = Arrays.asList(utterance.split("\\s"));
+            for (String word : words){
+                System.out.print(stemmer.stem(word.toLowerCase()) + " "); 
+            }           
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
