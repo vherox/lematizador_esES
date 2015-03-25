@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package stemmer;
 
 import java.io.File;
@@ -18,13 +14,12 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Verónica Santamaría
+ * @author Verónica Santamaría'
  */
 public class Test {
   
     public static void main(String[] args) {
         
-        FileInputStream fis = null;
         try {
             File affFile = new File("es_ES.aff"); 
             InputStream aff = new FileInputStream(affFile);
